@@ -46,4 +46,4 @@ All settings can be viewed and changed with '/config'. Use '/config reset <setti
 | `SendKey` | `Enter` | Key that sends a message. |
 | `SlashOpensCommand` | `true` | Open chat with `/` already entered when the slash key is pressed. |
 | `DebugLog` | `false` | Write chat network and internal debug information to the BepInEx log. |
-| `LinkWarning ` | `true` | Show a warning that says “Open this link in your browser?” when you click on a link |
+| `LinkWarning ` | `true` | Ask for confirmation before opening a link you clicked in chat |
