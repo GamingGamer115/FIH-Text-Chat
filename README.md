@@ -41,6 +41,7 @@ All settings can be viewed and changed with '/config'. Use '/config reset <setti
 | `MentionSound` | `true` | Play a sound when you are mentioned. |
 | `PingVolume` | `0.5` | Mention-ping volume (0–1). |
 | `OffsetX` | `4` | Horizontal chat offset from the right edge (−600–1700). |
+| `HudScale` | `1` | Size of the whole chat (0.5 = half, 2 = double) (range: 0.1 – 4) |
 | `OffsetY` | `0` | Vertical chat offset from screen center (−480–480). |
 | `OpenKey` | `T` | Key that opens chat. |
 | `SendKey` | `Enter` | Key that sends a message. |
