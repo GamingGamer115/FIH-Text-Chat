@@ -9,12 +9,15 @@
 | `Tab` | Complete a command or player name |
 | `Up` / `Down` | Move through autocomplete suggestions |
 | `Up` / `Down` while the input is empty | Recall sent messages and commands |
+| `Ctrl+Backspace` | Delete the word before the cursor (or the selected text) |
+| `Ctrl+Delete` | Delete the word after the cursor (or the selected text) |
 | `Ctrl+C` after selecting text | Copy selected chat text |
 
 ## Features
 - Multiplayer chat.
-- Commands: commands for help, history clearing, muting, action messages, configuration, and version checks.
+- Commands: commands for help, history clearing, muting, action messages, configuration, version checks, and stream chat linking.
 - Autocomplete: press Tab to complete commands and player names; type @ followed by a name to get mention suggestions. Use Up/Down to navigate suggestions or recall messages and commands when the input box is empty.
+- Word deletion: Ctrl+Backspace / Ctrl+Delete removes whole words in the chat box, including any selected text.
 - Mentions: highlight messages that mention your name and optionally play a ping sound.
 - Chat history and timestamps: adjustable history length, message fade duration, timestamps, and 12-/24-hour formatting.
 - Link controls: block links and received messages, or click a link while chat is open and confirm before opening it.
@@ -22,6 +25,7 @@
 - Persistent mutes: muted players remain muted after restarting the game.
 - In-game configuration: view, change, and reset settings with /config; changes are validated before they are applied.
 - Text selection: drag across chat text and press Ctrl+C to copy it.
+- Stream chat linking: messages from your Twitch or YouTube live chat appear in your in-game chat (only on your screen), with a platform icon and a per-second cap so a busy stream can't flood the chat.
 
 Multiplayer Note: Players need Text Chat installed to see messages sent through this mod. Players without it can still appear in join/leave notifications.
 
@@ -47,4 +51,12 @@ All settings can be viewed and changed with '/config'. Use '/config reset <setti
 | `SendKey` | `Enter` | Key that sends a message. |
 | `SlashOpensCommand` | `true` | Open chat with `/` already entered when the slash key is pressed. |
 | `DebugLog` | `false` | Write chat network and internal debug information to the BepInEx log. |
-| `LinkWarning ` | `true` | Ask for confirmation before opening a link you clicked in chat |
+
+Stream chat linking is managed with '/streamlink' (view with '/streamlink', reset with '/streamlink reset <setting|all>').
+| Setting | Default | Purpose |
+| --- | --- | --- |
+| `Enabled` | `true` | Turn stream chat linking on or off. Connects only while in a lobby. |
+| `Url` | *(none)* | Your Twitch channel link and/or YouTube live link (separated by a space). |
+| `YouTubeApiKey` | *(none)* | Free YouTube Data API key, needed for YouTube links. |
+| `ShowIcons` | `true` | Show a Twitch / YouTube icon before the viewer's name. |
+| `MaxPerSecond` | `3` | Most stream messages shown per second (1–10); extras are hidden. |
